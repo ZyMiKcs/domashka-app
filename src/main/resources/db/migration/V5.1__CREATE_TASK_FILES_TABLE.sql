@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS task_files
+(
+    id      BIGSERIAL PRIMARY KEY,
+    task_id BIGSERIAL NOT NULL REFERENCES tasks (id),
+    file_id BIGSERIAL NOT NULL REFERENCES files (id)
+);

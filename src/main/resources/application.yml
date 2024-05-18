@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: myapp
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:postgresql://localhost:5432/conque_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    url: jdbc:postgresql://localhost:5432/conque_db
+    locations: classpath:db/migration
+    user: postgres
+    password: postgres
+
+app:
+  storage:
+    aws:
+      bucketName: ***
+      credentials:
+        accessKey: ***
+        secretKey: ***
+      endpoint: http://storage.yandexcloud.net
+      region: ru-central1

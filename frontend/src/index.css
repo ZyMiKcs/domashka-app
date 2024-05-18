@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .closed {
+        @apply bg-[#4AC99B]/15 rounded-[30px];
+
+        span {
+            @apply bg-[#4AC99B];
+        }
+    }
+
+    .new {
+        @apply bg-[#70B6F6]/15 rounded-[30px];
+
+        span {
+            @apply bg-[#70B6F6];
+        }
+    }
+
+    .in_progress {
+        @apply bg-[#79818C]/15 rounded-[30px];
+
+        span {
+            @apply bg-[#79818C];
+        }
+    }
+
+    .deadline {
+        @apply bg-[#FFC700]/15 rounded-[30px];
+
+        span {
+            @apply bg-[#FFC700];
+        }
+    }
+}
+
+.active {
+    background-color: rgb(0, 0, 0, 0.05);
+}
+
+.active #subjects {
+    stroke: #191c30e9;
+}
+
+.active svg:not(#subjects) {
+    fill: #191c30e9;
+}
+
+.task-shadow {
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+        4px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
